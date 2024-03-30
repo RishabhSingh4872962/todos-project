@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+/* #container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+.expire{
+    color: red;
+}
+
+
+#container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+   /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+h5{ text-align: left;}
+/* Add Item Section */
+#add-item-section {
+    margin-bottom: 20px;
+}
+
+#add-item-section input[type="text"],
+#add-item-section input[type="date"],
+#add-item-section select {
+    width: 200px;
+    margin-right: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#add-item-section button {
+    padding: 8px 20px;
+    background-color: #02080e;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+
+.todo{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    color: whitesmoke;
+    background-color: black;
+    border: 3px solid rgb(34, 32, 32);
+}
+
+.todo-completed{
+    color: black;
+    background-color: white;
+}
+
+
+
+
+
+
+
+/* Task Section Styling */
+.task-section {
+    
+    padding: 10px;
+    margin-bottom: 20px;
+}

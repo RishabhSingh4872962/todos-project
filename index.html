@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <h1>To-Do List</h1><br>
+    <div id="container">
+        <div id="add-item-section">
+            <input type="text" placeholder="Item name" id="todoName" />
+            <input type="date" placeholder="Deadline"  id="deadline" />
+            <select title="piority" name="piority" id="piority">
+                <option value="" disabled selected hidden>Piority</option>
+                <option value="high">High</option>
+                <option value="medium">Medium</option>
+                <option value="low">Low</option>
+            </select>
+
+            <button id="addTodo" onclick="handleSubmit()" type="submit">Add Item</button>
+        </div>
+
+    </div>
+    <div id="todosLists">
+        <h2>Today's TodosList</h2>
+        <div id="todayTodos" class="task-section">
+          
+        </div>
+        <h2>Future TodosList</h2>
+        <div id="futureTodos" class="task-section">
+            
+
+        </div>
+        <h2>completed TodosList</h2>
+        <div id="completedTodos" class="task-section">
+            
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
