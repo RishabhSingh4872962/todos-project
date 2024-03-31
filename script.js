@@ -23,19 +23,26 @@ localStorage.setItem(
       todoName: "project complete",
       deadline: "28/03/2024",
       piority: "medium",
-      completed: true,
+      completed: false,
     },
     {
       id: 3,
       todoName: "get a bike",
-      deadline: "30/03/2024",
+      deadline: "31/03/2024",
       piority: "high",
       completed: false,
+    },
+    {
+      id: 4,
+      todoName: "get a bike",
+      deadline: "30/03/2024",
+      piority: "high",
+      completed: true,
     },
   ])
 );
 
-let id = 4;
+let id = 5;
 
 let todos = JSON.parse(localStorage.getItem("todos"));
 const priorityOrder = {
@@ -144,8 +151,9 @@ function createAppendTodo(todo, container, addClass, comp) {
   } else {
     div.append(name, date, piorityStr, svgIcon);
   }
-  if (addClass == "true") {
-    div.classList.add("expire");
+  if (checkExpire(todo.deadline) && todo.completed==false) {
+    div.style.border="2px solid red"
+  
   }
   container.appendChild(div);
 }
@@ -200,9 +208,13 @@ renderTodos(todos);
 function checkExpire(deadline) {
   const todoDate = deadline.split("/").map((ele) => Number(ele));
   const currentDate = todayDate.split("/").map((ele) => Number(ele));
-  return (
+  console.log(todoDate,currentDate)
+  if  (
     todoDate[2] <= currentDate[2] &&
     todoDate[1] <= currentDate[1] &&
     todoDate[0] < currentDate[0]
-  );
+  ) {
+    return true;
+  }
+  return false;
 }

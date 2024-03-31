@@ -10,9 +10,6 @@ body {
   align-items: center;
 } */
 
-.expire{
-    color: red;
-}
 
 
 #container {
@@ -61,6 +58,7 @@ h5{ text-align: left;}
     color: whitesmoke;
     background-color: black;
     border: 3px solid rgb(34, 32, 32);
+    margin: 5px;
 }
 
 .todo-completed{
